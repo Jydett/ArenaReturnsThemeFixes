@@ -1,0 +1,39 @@
+Index: gui.theme/default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gui.theme/default.xml b/gui.theme/default.xml
+--- a/gui.theme/default.xml	(revision db0dab7fb26e0c294a9c9aa20c440def31cfb355)
++++ b/gui.theme/default.xml	(date 1672482812858)
+@@ -5627,18 +5627,19 @@
+     <sliderVolume>
+         <themeElement>
+             <SliderAppearance>
+-                <PixmapBorder>
+-                    <Pixmap texture="themeSimple" position="north_west" x="0" y="0" width="0" height="10"/>
+-                    <Pixmap texture="themeSimple" position="north" x="621" y="549" width="160" height="10"/>
+-                    <Pixmap texture="themeSimple" position="north_east" x="0" y="0" width="0" height="10"/>
+-                    <Pixmap texture="themeSimple" position="east" x="0" y="0" width="0" height="0"/>
+-                    <Pixmap texture="themeSimple" position="south_east" x="0" y="0" width="0" height="0"/>
+-                    <Pixmap texture="themeSimple" position="south" x="0" y="0" width="160" height="0"/>
+-                    <Pixmap texture="themeSimple" position="south_west" x="0" y="0" width="0" height="0"/>
+-                    <Pixmap texture="themeSimple" position="west" x="0" y="0" width="0" height="0"/>
++                <PixmapBorder scaled="true">
++                    <Pixmap texture="themeSimple3" position="NORTH_WEST" x="131" y="495" width="6" height="7"/>
++                    <Pixmap texture="themeSimple3" position="NORTH" x="137" y="495" width="26" height="7"/>
++                    <Pixmap texture="themeSimple3" position="NORTH_EAST" x="163" y="495" width="6" height="7"/>
++                    <Pixmap texture="themeSimple3" position="EAST" x="163" y="502" width="6" height="6"/>
++                    <Pixmap texture="themeSimple3" position="SOUTH_EAST" x="163" y="508" width="6" height="4"/>
++                    <Pixmap texture="themeSimple3" position="SOUTH" x="137" y="508" width="26" height="4"/>
++                    <Pixmap texture="themeSimple3" position="SOUTH_WEST" x="131" y="508" width="6" height="4"/>
++                    <Pixmap texture="themeSimple3" position="WEST" x="131" y="502" width="6" height="6"/>
++                    <Pixmap texture="themeSimple3" position="CENTER" x="137" y="502" width="26" height="6"/>
+                 </PixmapBorder>
+-                <PixmapBackground scaled="false" enabled="true">
+-                    <Pixmap texture="themeSimple" position="center" x="621" y="559" width="160" height="19"/>
++                <PixmapBackground scaled="false">
++                    <!--                    <Pixmap texture="themeSimple" position="center" x="621" y="314" width="160" height="19"/>-->
+                 </PixmapBackground>
+                 <themeElement name="horizontalButton">
+                     <LabelAppearance state="default">
