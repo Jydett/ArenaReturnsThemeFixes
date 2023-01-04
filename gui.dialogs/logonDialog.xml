@@ -118,8 +118,43 @@
                         <button style="green" text="%connect%" onClick="dofusarena:logon(loginForm)">
                             <sld align="south" size="180,25" yOffset="30"/>
                         </button>
-
                     </sl>
+                </container>
+
+                <container>
+                    <sld align="center" size="200,100" yOffset="-200"/>
+                    <rl horizontal="false">
+                        <checkBox text="%options.musicMute%"
+                                  onSelectionChange="dofusarena:setMusicMute">
+                            <bld data="west"/>
+                            <property attribute="selected" name="gamePreferences"
+                                      field="musicMute"/>
+                        </checkBox>
+                        <container prefSize="200,10">
+                            <bld data="east"/>
+                            <slider horizontal="true" sliderSize="0.25"
+                                    style="volume"
+                                    onSliderMove="dofusarena:setMusicVolume">
+                                <property attribute="value" name="gamePreferences"
+                                          field="musicVolume"/>
+                            </slider>
+                        </container>
+                        <checkBox text="%options.soundsMute%"
+                                  onSelectionChange="dofusarena:setSoundsMute">
+                            <bld data="west"/>
+                            <property attribute="selected" name="gamePreferences"
+                                      field="ambianceSoundsMute"/>
+                        </checkBox>
+                        <container prefSize="200,10">
+                            <bld data="east"/>
+                            <slider horizontal="true" sliderSize="0.25"
+                                    style="volume"
+                                    onSliderMove="dofusarena:setSoundsVolume">
+                                <property attribute="value" name="gamePreferences"
+                                          field="ambianceSoundsVolume"/>
+                            </slider>
+                        </container>
+                    </rl>
                 </container>
             </sl>
         </container>
