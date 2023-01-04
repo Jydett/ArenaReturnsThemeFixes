@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container style="fullBackground">
+    <sld size="100%,100%"/>
+
+    <sl>
+        <container style="login">
+            <sld align="center" size="754,730"/>
+            <sl>
+
+                <container style="">
+                    <Appearance>
+                        <margin insets="60,0,0,0"/>
+                    </Appearance>
+                    <sld align="center" size="275,325"/>
+                    <sl>
+                        <container style="">
+                            <sld align="north" size="275,25"/>
+                            <bl>
+                                <container style="">
+                                    <bld data="west"/>
+                                    <label text="%dialog.logon.title%" style="title">
+                                        <Appearance>
+                                            <margin insets="10,5,10,10"/>
+                                        </Appearance>
+                                    </label>
+                                </container>
+                                <container style="" prefSize="110,0">
+                                    <bld data="east"/>
+                                    <rl horizontal="true">
+                                        <radioGroup id="gameLanguage">
+                                            <property attribute="value" name="gamePreferences" field="language"/>
+                                        </radioGroup>
+                                        <radioButton groupId="gameLanguage" style="login" value="es"
+                                                     onMouseRelease="dofusarena:setLanguage(es)">
+                                            <appearance>
+                                                <margin insets="0,0,2,2"/>
+                                            </appearance>
+                                        </radioButton>
+                                        <radioButton groupId="gameLanguage" style="login" value="en"
+                                                     onMouseRelease="dofusarena:setLanguage(en)">
+                                            <appearance>
+                                                <margin insets="0,0,2,2"/>
+                                            </appearance>
+                                        </radioButton>
+                                        <radioButton groupId="gameLanguage" style="login" value="fr"
+                                                     onMouseRelease="dofusarena:setLanguage(fr)">
+                                            <appearance>
+                                                <margin insets="0,0,2,2"/>
+                                            </appearance>
+                                        </radioButton>
+                                        <radioButton groupId="gameLanguage" style="login" value="de"
+                                                     onMouseRelease="dofusarena:setLanguage(de)">
+                                            <appearance>
+                                                <margin insets="0,0,2,2"/>
+                                            </appearance>
+                                        </radioButton>
+                                    </rl>
+                                </container>
+                            </bl>
+                        </container>
+                        <container style="">
+                            <sld align="center" size="215,200" yOffset="5"/>
+                            <rl horizontal="false">
+                                <form validate="dofusarena:validateLoginForm" id="loginForm">
+                                    <container style="loginBackground" prefSize="275,20" expandable="false">
+                                        <label text="%account.name%" style="ladderEntry"/>
+                                    </container>
+                                    <texteditor onKeyPress="dofusarena:logon(loginForm)" focused="true"
+                                                selectOnFocus="true" prefSize="275,20" expandable="false">
+                                        <Appearance>
+                                            <margin insets="0,10,0,0"/>
+                                        </Appearance>
+                                        <labelAppearance alignment="west"/>
+                                        <property attribute="text" name="account.name"/>
+                                    </texteditor>
+                                    <container style="loginBackground" prefSize="275,20" expandable="false">
+                                        <label text="%account.password%" style="ladderEntry"/>
+                                    </container>
+                                    <texteditor password="true" onKeyPress="dofusarena:logon(loginForm)"
+                                                selectOnFocus="true" prefSize="275,20" expandable="false">
+                                        <property attribute="text" name="account.password"/>
+                                        <labelAppearance alignment="west"/>
+                                    </texteditor>
+                                    <container prefSize="275,20" expandable="false">
+                                        <appearance>
+                                            <margin insets="5,0,0,0"/>
+                                        </appearance>
+                                        <bl>
+                                            <checkBox text="%account.remember%">
+                                                <bld data="west"/>
+                                                <property attribute="selected" name="account.remember"/>
+                                            </checkBox>
+                                        </bl>
+                                    </container>
+                                    <comboboxplus prefSize="275,20" expandable="false">
+                                        <sld align="center" size="150,20"/>
+                                        <property attribute="content" name="proxy.list"/>
+                                        <property attribute="selectedValue" name="proxy.selected"/>
+                                        <renderableContainer>
+                                            <itemRenderer>
+                                                <label nonBlocking="true">
+                                                    <item attribute="text"/>
+                                                </label>
+                                            </itemRenderer>
+                                        </renderableContainer>
+                                        <list horizontal="false" cellSize="100%, 16">
+                                            <itemRenderer>
+                                                <label nonBlocking="true">
+                                                    <item attribute="text"/>
+                                                </label>
+                                            </itemRenderer>
+                                        </list>
+                                    </comboboxplus>
+
+                                </form>
+                            </rl>
+                        </container>
+                        <button style="green" text="%connect%" onClick="dofusarena:logon(loginForm)">
+                            <sld align="south" size="180,25" yOffset="30"/>
+                        </button>
+
+                    </sl>
+                </container>
+            </sl>
+        </container>
+
+        <button text="X  " style="Light" onClick="dofusarena:quit">
+            <sld align="north_east" size="70,30"/>
+            <labelAppearance alignment="east"/>
+            <tooltip text="%quit%" hotPointPosition="north_east" position="south_west"/>
+        </button>
+
+        <label style="loginBuildVersion">
+            <sld align="south_west"/>
+            <labelAppearance textColor="1,1,1,1">
+                <margin insets="0,5,5,0"/>
+            </labelAppearance>
+            <property attribute="text" name="buildVersion"/>
+        </label>
+
+
+    </sl>
+</container>
